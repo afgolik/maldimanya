@@ -1,0 +1,3166 @@
+/* colors */
+
+$orange: #DFAB5E
+$blue: #00BBC5
+$black: #000000
+$white: #FFFFFF
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Montserrat', sans-serif
+    font-size: 20px
+    line-height: 1.2
+
+html 
+    scroll-behavior: smooth
+
+body
+    background: #F5F5F5
+    overflow-x: hidden
+
+img
+    max-width: 100%
+
+a, p, span
+    color: inherit
+    font-weight: inherit
+    text-decoration: none
+    font-size: inherit
+
+h1
+    font-size: 74px
+    font-weight: 900
+    color: $white
+
+.magnolya
+    font-family: 'Magnolia'
+
+.title
+    font-size: 60px
+    font-weight: 400
+    font-family: 'Magnolia'
+    text-align: center
+.border-orange
+    border: 2px solid $orange
+    border-radius: 30px
+.border-blue
+    border: 2px solid $blue
+    box-sizing: border-box
+    border-radius: 30px
+.orange
+    color: $orange
+.blue
+    color: $blue
+.bold
+    font-weight: 700
+
+video
+    width: 100%
+.video
+    height: 958px
+    overflow: hidden
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 0
+
+.btn
+    width: 100%
+    height: 44px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: none
+    border: 1.45px solid $blue
+    border-radius: 21.75px
+    cursor: pointer
+    transition: all .3s
+    &:hover
+        background: $blue
+        color: $white
+
+.mobile-530
+    display: none
+.mobile-992
+    display: none !important
+
+.carousel
+    &.owl-theme
+        .owl-dots, .owl-nav
+            display: block !important
+            margin-top: 56px !important
+        .owl-dots
+            position: relative
+        .owl-dot 
+            span
+                width: 20px
+                height: 20px
+                border-radius: 50%
+                background: none
+                margin: 5px 10px
+            &.active span
+            &:hover span
+                background: none
+        .owl-nav
+            position: absolute
+            width: 100%
+            text-align: center
+            .owl-prev
+                position: relative
+                left: -106px
+                top: -6px
+                z-index: 2
+                &:hover
+                    background: none
+            .owl-next
+                transform: rotate(180deg)
+                position: relative
+                right: -104px
+                top: -11px
+                z-index: 2
+                &:hover
+                    background: none
+
+.header
+    position: absolute
+    top: 0
+    width: 100%
+    height: 155px
+    z-index: 1
+    &__mobile
+        display: none
+    &__burger
+        display: none
+    &__container
+        width: 1260px
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+    &__left
+        margin-top: 50px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    &__menu
+        display: flex
+        list-style: none
+        align-items: center
+        margin-left: 45px
+        position: relative
+        top: -10px
+        li
+            margin-left: 35px
+            padding: 8px 0
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 100%
+                height: 2px
+                background: $white
+                opacity: 0
+                transition: opacity .3s
+            &:hover::after
+                opacity: 1
+            &.active::after
+                opacity: 1
+        a
+            color: $white
+            font-size: 22px
+            font-weight: 500
+            white-space: nowrap
+    &__arrow
+        cursor: pointer
+        position: relative
+        &:hover::after
+            content: none
+        &-menu
+            position: absolute
+            height: 173px
+            width: 222px
+            left: calc(50% - 111px)
+            padding-top: 25px
+            display: none
+            a
+                display: block
+                background: $white
+                color: $black
+                height: 51px
+                margin-bottom: 10px
+                border-radius: 10px
+                display: flex
+                justify-content: center
+                align-items: center
+                transition: all .3s
+                &:hover
+                    background: $blue
+                    color: $white
+        &:hover
+            .header__arrow-menu
+                display: block
+    &__socials
+        display: flex
+    &__social
+        width: 70px
+        height: 100px
+        position: relative
+        background: rgba(245, 245, 245, 0.47)
+        margin-left: 10px
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        margin-left: 30px
+        padding-bottom: 3px
+        &::after
+            content: ''
+            position: absolute
+            bottom: -20px
+            left: 0
+            border-style: solid
+            border-width: 20px 35px 0 35px
+            border-color: rgba(245, 245, 245, 0.47) transparent transparent transparent
+
+.first
+    position: relative
+    &__title
+        position: relative
+        max-width: 1204px
+        text-align: center
+        padding-top: 335px
+        margin: 0 auto
+        text-transform: uppercase
+        &-islands
+            padding-top: 356px
+    &__video
+        &-btns
+            width: 85px
+            height: 85px
+            position: relative
+            margin: 129px auto 0
+            padding-bottom: 316px
+    &__btn
+        width: 85px
+        height: 85px
+        background: rgba(255, 255, 255, 0.23)
+        border: 2.61538px solid $white
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        img
+            transition: all .3s
+        &:hover img
+            transform: scale(1.15)
+        &-text
+            font-weight: 700
+            color: $white
+            position: absolute
+            width: 210px
+            margin-top: 20px
+            text-align: center
+            left: calc(50% - 105px)
+    &__play
+        padding-left: 7px
+
+.main
+    position: relative
+    &__first
+        background: url('../images/backgrounds/main.png')
+        background-repeat: no-repeat
+    &__info
+        max-width: 1280px
+        margin: 150px auto 0
+        padding: 35px 30px 17px
+        font-size: 25px
+        font-weight: 400
+        &-container
+            position: relative
+            width: 1530px
+            margin: 0 auto
+        p
+            text-align: center
+            margin-bottom: 31px
+        .blue
+            margin-bottom: 37px
+        span
+            font-size: 35px
+            font-weight: 400
+            font-family: 'Magnolia'
+        &-background-arrow
+            position: absolute
+            background: url('../images/backgrounds/arrow1.svg')
+            background-repeat: no-repeat
+            width: 485px
+            height: 455px
+            right: 0
+            top: 176px
+            z-index: -1
+
+.wait
+    padding-top: 208px
+    position: relative
+    &-background
+        &-spot1
+            position: absolute
+            background: url('../images/backgrounds/spot1.svg')
+            background-repeat: no-repeat
+            width: 803px
+            height: 222px
+            top: 50px
+            left: -28px
+            z-index: -1
+        &-lines
+            position: absolute            
+            background: url('../images/backgrounds/lines1.svg')
+            background-repeat: no-repeat
+            width: 631px
+            height: 76px
+            bottom: -90px
+            left: 130px
+            z-index: -1
+        &-spot2
+            position: absolute
+            background: url('../images/backgrounds/spot2.svg')
+            background-repeat: no-repeat
+            width: 385px
+            height: 450px
+            bottom: -360px
+            right: 0
+            z-index: -1
+    &__container
+        width: 1398px
+        margin: 0 auto
+    &__carousel
+        margin: 66px 0
+        &-slide
+            width: 270px
+            transition: transform .3s
+            position: relative
+            display: block
+            &::after
+                content: ''
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                background: rgba(0, 0, 0, 0.01)
+                backdrop-filter: blur(1px)
+            span
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                display: flex
+                align-items: center
+                justify-content: center
+                font-size: 14px
+                font-weight: 700
+                color: $white
+        &-active
+            transform: scale(2.6)
+            backdrop-filter: none
+            &::after
+                content: none
+            span
+                font-size: 9.6px
+        &-preactive
+            transform: scale(2)
+            span
+                font-size: 12.5px
+        .owl-item
+            z-index: 1
+            height: 390px
+            display: flex
+            align-items: center 
+            width: 270px
+            img
+                width: 100%
+        .z-1
+            z-index: 2
+        .z-2
+            z-index: 3
+        &.owl-theme
+            .owl-dot 
+                span
+                    border: 2px solid $orange
+                &.active span
+                    background: $orange      
+
+.tours
+    margin-top: 197px
+    position: relative
+    &__container
+        width: 1140px
+        margin: 0 auto
+        position: relative
+    &__title
+        position: relative
+        span
+            font-family: inherit
+    &-background-palms
+        position: absolute
+        background: url('../images/backgrounds/pic1.svg')
+        background-repeat: no-repeat
+        width: 189px
+        height: 174px
+        right: 80px
+        bottom: -24px
+        z-index: -1
+    &-background-arrow
+        position: absolute
+        background: url('../images/backgrounds/arrow2.svg')
+        background-repeat: no-repeat
+        width: 960px
+        height: 780px
+        right: -110px
+        bottom: -83px
+        z-index: -1
+    &-background-spot
+        position: absolute
+        background: url('../images/backgrounds/spot1.svg')
+        background-repeat: no-repeat
+        width: 635px
+        height: 222px
+        left: -245px
+        bottom: -88px
+        z-index: -1
+    &__slide
+        width: 290px
+        height: 500px
+        background: $white
+        box-shadow: 0px 2.9px 7.25px rgba(0, 0, 0, 0.25)
+        border-radius: 36.25px
+        padding: 33px 17px 28px
+        margin: 40px auto
+        cursor: pointer
+        transition: all .3s
+        &:hover
+            transform: scale(1.062)
+            box-shadow: 0px 6.384px 15.96px rgba(0, 187, 197, 0.7)
+        &-img
+            width: 150px
+            height: 150px
+            border-radius: 50%
+            overflow: hidden
+            margin: 0 auto
+        &-dates
+            margin-top: 26px
+            font-size: 14px
+            text-align: center
+        &-title
+            font-size: 14px
+            width: 190px
+            text-transform: uppercase
+            text-align: center
+            margin: 18px auto 15px
+        &-info
+            font-size: 14px
+            margin-bottom: 7px
+        &-price
+            margin-top: 17px
+        &-btn
+            width: 218px
+            margin: 30px auto 0
+            font-size: 15.5px
+    &__all
+        text-align: center
+        margin-top: 10px
+        a
+            display: flex
+            align-items: center
+            justify-content: center
+        img
+            margin-left: 10px
+    &__carousel
+        margin-top: 52px
+        &.owl-theme
+            .owl-dots, .owl-nav
+                margin-top: 15px !important
+            .owl-dot 
+                span
+                    border: 2px solid $blue
+                &.active span
+                    background: $blue
+
+.team
+    margin-top: 200px
+    &__container
+        width: 1280px
+        margin: 0 auto
+    &__title
+        margin-top: 25px
+        span
+            font-family: inherit
+    &__items
+        display: flex
+        margin-top: 103px
+        padding: 0 78px
+    &__item
+        width: 250px
+        height: 363px
+        padding: 20px 20px 33px
+        background: $white
+        border-radius: 10px
+        cursor: pointer
+        transition: all .3s
+        &:nth-child(1)
+            transform: rotate(-10.29deg)
+        &:nth-child(2)
+            transform: rotate(8deg)
+            margin-left: 50px
+        &:nth-child(3)
+            transform: rotate(15.4deg)
+            margin-left: 55px
+        &:nth-child(4)
+            transform: rotate(-10.29deg)
+            margin-left: 11px
+            margin-top: -11px
+        &:hover
+            transform: scale(1.18)
+            box-shadow: 0px 7.08543px 17.7136px rgba(0, 187, 197, 0.7)
+    &__info
+        width: 189px
+        height: 43px
+        background: $blue
+        color: $white
+        border-radius: 21.75px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        position: relative
+        top: -35px
+        &-text
+            font-size: 13px
+        &-title
+            font-size: 14px
+            font-weight: 700
+            text-transform: uppercase
+    &__text
+        max-width: 900px
+        margin: 75px auto 47px
+        font-size: 14px
+        text-align: center
+        min-height: 35px
+        &-info
+            display: none
+            font-size: 14px
+            text-align: center
+
+.reviews
+    margin-top: 263px
+    position: relative
+    &__container
+        width: 1160px
+        margin: 0 auto
+    &__title
+        position: relative
+        span
+            font-family: inherit
+    &-background
+        &-dolphin1
+            background: url('../images/backgrounds/dolphin_blue.svg')
+            background-repeat: no-repeat
+            width: 261px
+            height: 130px
+            position: absolute
+            right: 110px
+            top: -165px
+        &-dolphin2
+            background: url('../images/backgrounds/dolphin_orange.svg')
+            background-repeat: no-repeat
+            width: 181px
+            height: 243px
+            position: absolute
+            right: -15px
+            top: -165px
+        &-spot
+            background: url('../images/backgrounds/spot3.svg')
+            background-repeat: no-repeat
+            width: 500px
+            height: 222px
+            position: absolute
+            left: -30px
+            top: -65px
+    &__carousel
+        margin-top: 50px
+        &.owl-theme
+            .owl-dots, .owl-nav
+                margin-top: 45px !important
+            .owl-dot 
+                span
+                    border: 2px solid $orange
+                &.active span
+                    background: $orange
+        .owl-item
+            padding-top: 157px
+            &:hover
+                padding-top: 28px
+                padding-bottom: 130px
+                .reviews__slide
+                    transform: scale(1.12)
+                    background: $orange
+                .reviews__slide-img, .reviews__slide-name, .reviews__slide-info, .reviews__slide-watch
+                    transform: scale(0.89)
+                    color: $white
+                    border-bottom-color: $white
+                .reviews__slide-img
+                    margin-top: 8px
+                .reviews__slide-name
+                    margin-top: 23px
+    &__slide
+        display: block
+        width: 250px
+        height: 350px
+        background: $white
+        border-radius: 30px
+        padding: 13px 40px
+        text-align: center
+        transition: all .3s
+        margin: 0 auto
+        &-img
+            width: 120px
+            height: 120px
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0 auto
+            border-radius: 50%
+            overflow: hidden
+        &-name
+            font-size: 15px
+            font-weight: 700
+            margin-top: 30px
+            text-align: center
+        &-info
+            font-size: 12px
+            margin-top: 11px
+            text-align: center
+            font-style: italic
+        &-watch
+            font-size: 12px
+            font-style: italic
+            padding: 0 10px 5px
+            border-bottom: 1px solid $black
+            display: inline-block
+            margin-top: 35px
+            cursor: pointer
+        &-heart
+            width: 19px
+            height: 19px
+            margin: 0 auto
+
+.answers
+    margin-top: 75px
+    padding-top: 259px
+    position: relative
+    margin-bottom: 220px
+    &-background-lines
+        position: absolute
+        background: url('../images/backgrounds/lines1.svg')
+        background-repeat: no-repeat
+        width: 631px
+        height: 76px
+        top: -4px
+        right: calc(50% - 306px)
+        z-index: -1
+    &-background-spot
+        position: absolute
+        background: url('../images/backgrounds/spot4.svg')
+        background-repeat: no-repeat
+        width: 390px
+        height: 364px
+        top: -47px
+        right: 0
+        z-index: -1
+    &-background-shark
+        position: absolute
+        background: url('../images/backgrounds/shark.svg')
+        background-repeat: no-repeat
+        width: 119px
+        height: 119px
+        top: 10px
+        left: -120px
+        z-index: -1
+    &__title
+        position: relative
+        span
+            font-family: inherit
+    &__container
+        width: 1060px
+        margin: 0 auto
+    &__items
+        display: flex
+        margin-top: 102px
+    &__item
+        width: 50%
+        &:nth-child(1)
+            padding-right: 20px
+        &:nth-child(2)
+            padding-left: 20px
+            border-left: 1px solid #A6A6A6
+    &__accordeon
+        border-bottom: 1px solid #A6A6A6
+        padding: 40px 0 15px
+        &:nth-child(1)
+            padding-top: 21px
+        &-text
+            max-height: 0
+            overflow: hidden
+            transition: all .3s
+            font-size: 15px
+            font-style: italic
+            &-show
+                max-height: 600px
+                padding: 5px 0
+        &-title
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &-open
+            cursor: pointer
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: transform .3s
+            &-show
+                transform: rotate(45deg)
+
+.ocean
+    background: url(../images/backgrounds/ocean.png)
+    text-align: center
+    padding: 120px 0
+    &__title
+        font-size: 70px
+        font-weight: 700
+        color: $white
+        margin-top: 41px
+        text-transform: uppercase
+    &__btn
+        width: 420px
+        height: 70px
+        border: 3px solid $white
+        color: $white
+        margin: 58px auto 0
+        border-radius: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 40px
+        cursor: pointer
+        transition: all .3s
+        &:hover
+            background: $white
+            color: $blue
+
+.footer
+    padding: 60px 0
+    &__container
+        width: 1240px
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    &__menu
+        display: flex
+        margin-left: 83px
+        ul
+            list-style: none
+            &:nth-child(1)
+                padding-right: 16px
+                border-right: 1px solid $black
+                li
+                    text-align: right
+            &:nth-child(2)
+                padding-left: 16px
+        li
+            margin-top: 30px
+            &:nth-child(1)
+                margin-top: 0
+    &__connect
+        text-align: right
+        &-phone
+            display: block
+            margin-top: 24px
+            text-align: right
+        &-mail
+            display: block
+            margin-top: 14px
+            text-align: right
+        &-text
+            text-align: right
+        img
+            margin-left: 20px
+            margin-top: 22px
+
+.islands
+    height: 1300px
+    overflow-x: hidden
+    overflow-y: visible
+    position: relative
+    &__location
+        position: absolute
+        cursor: pointer
+        &:hover path
+            fill: $blue
+        &:hover .islands__title
+            color: $blue
+        &-active
+            .islands__title
+                color: $blue
+            path
+                fill: $blue
+            .islands__info
+                display: block
+    &__title
+        font-size: 40px
+        position: absolute
+        color: #A3A3A3
+        font-family: 'Magnolia'
+    &__first
+        background: url(../images/islands/background.png)
+        background-repeat: no-repeat
+        height: 750px
+        background-size: cover
+    &__container
+        width: 1200px
+        margin: 0 auto
+        position: relative
+    &__one
+        position: absolute
+        top: 136px
+        left: -279px
+    &__second
+        position: absolute
+        top: 261px
+        left: -631px
+    &__third
+        position: absolute
+        top: 565px
+        left: -110px
+        &-location
+            top: -17px
+            right: 96px
+        &-title
+            top: -62px
+            right: -31px
+    &__fourth
+        position: absolute
+        top: 472px
+        left: 189px
+        &-location
+            top: -63px
+            right: 26px
+        &-title
+            top: -62px
+            right: -30px
+    &__fifth
+        position: absolute
+        top: 312px
+        left: 619px
+    &__sixth
+        position: absolute
+        top: 448px
+        right: -1014px
+        max-width: none
+        &-location
+            top: -63px
+            right: 26px
+        &-title
+            top: -62px
+            right: -30px
+    &__seventh
+        position: absolute
+        top: 840px
+        left: 334px
+    &__eighth
+        position: absolute
+        top: 846px
+        right: 100px
+        &-location
+            top: -53px
+            right: 96px
+        .islands__location
+            &-active
+                .islands__info
+                    top: -600px
+                    right: 150px
+        &-title
+            top: -62px
+            right: -31px
+    &__palms
+        position: absolute
+        top: 180px
+        left: 161px
+        width: 288px
+    &__spot
+        position: absolute
+        right: -615px
+        top: 70px
+        &-blue
+            position: absolute
+            left: 0
+            top: -270px
+            transform: scale(-1, 1) rotate(-13deg)
+    &__dolphins
+        position: absolute
+        top: 736px        
+        left: 461px
+    &__info
+        display: none
+        width: 355px
+        height: 612px
+        background: $white
+        box-shadow: 0px 3.55125px 8.87813px rgba(0, 0, 0, 0.25)
+        border-radius: 44px
+        text-align: center
+        position: absolute
+        top: -400px
+        right: -450px
+        padding: 41px 20px 35px
+        z-index: 1
+        &-photo
+            width: 231px
+            height: 226px
+            overflow: hidden
+            border-radius: 44px
+            margin: 0 auto
+        &-title
+            font-size: 17px
+            margin-top: 37px
+        &-text
+            font-size: 17px
+            text-align: left
+            margin-top: 29px
+        &-btn
+            border-width: 2px
+            height: 53px
+            width: 266px
+            margin: 35px auto 0
+
+.hotels
+    margin-bottom: 190px
+    padding-top: 8px
+    position: relative
+    &__container
+        width: 1140px
+        margin: 0 auto
+    &__slide
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &:hover
+            box-shadow: 0px 7.09901px 17.7475px #DFAB5E
+        &-img
+            width: 189px
+            height: 150px
+            border-radius: 36px
+            overflow: hidden
+            display: flex
+            align-items: center
+            justify-content: center
+            margin: 0 auto
+        &-btn
+            border-color: $orange
+            &:hover
+                background: $orange
+        &-title
+            height: 35px
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            justify-content: center
+    &__carousel
+        &.owl-theme
+            .owl-nav, .owl-dots
+                margin-top: 10px !important
+            .owl-dot
+                span
+                    border: 2px solid $orange
+                &.active span
+                    background: $orange
+
+.hotel
+    background: $blue
+    height: 766px
+    &__container
+        width: 1240px
+        margin: 0 auto
+        padding-top: 258px
+    &__title
+        font-family: 'Magnolia'
+        font-size: 70px
+        font-weight: 400
+        color: $white
+        span
+            font-size: 70px
+            font-weight: 500
+    &__img
+        margin-top: 31px
+.about
+    width: 1240px
+    margin: 0 auto
+    margin-top: 352px
+    &__item
+        display: flex
+        align-items: center
+    &__content
+        padding: 55px 149px 64px 148px
+        max-width: 720px
+    &__title
+        text-align: center
+        color: $orange
+        font-size: 40px
+        font-weight: 400
+        font-family: 'Magnolia'
+    &__text
+        margin-top: 34px
+        font-weight: 400
+        font-size: 20px
+    &__img
+        display: flex
+        align-items: center
+        margin-left: 40px
+.adv
+    width: 1240px
+    margin: 125px auto
+    &__content
+        display: flex
+        align-items: center
+        &-item
+            display: flex
+            align-items: center        
+            margin-left: 80px
+            margin-bottom: 12px
+            max-width: 630px
+        &-text
+            font-weight: 40
+            font-size: 20px
+            margin-left: 13px
+            display: flex
+            max-width: 572px
+            flex-direction: column
+            align-items: flex-start
+            justify-content: center
+        &-info
+                font-style: italic
+                font-size: 15px
+                font-weight: 400
+.kitchen
+    width: 1240px
+    margin: -5px auto
+    &__item
+        display: flex
+    &__content
+        padding: 55px 148px 0px 147px
+        max-width: 720px
+    &__title
+        text-align: center
+        color: $orange
+        font-size: 40px
+        font-weight: 400
+        font-family: 'Magnolia'
+    &__text
+        margin-top: 34px
+        font-weight: 400
+        font-size: 20px
+    &__img
+        display: flex
+        align-items: center
+        margin-left: 40px  
+.review
+    position: relative
+    margin-top: 166px
+    &__container
+        margin: 0 auto
+        width: 920px
+        position: relative
+    &__all
+        color: $white
+        position: absolute
+        right: 84px
+        bottom: 45px
+        z-index: 1
+        a
+            display: flex
+            align-items: center
+        svg
+            transform: scale(-1, 1)
+            margin-right: 12px
+    &__slide
+        margin: 0 auto
+        width: 920px
+        height: 535px
+        position: relative
+        img
+            position: absolute
+            &:nth-child(1)
+                right: 360px
+            &:nth-child(2)
+                bottom: 78px
+            &:nth-child(3)
+                right: 360px
+                bottom: 0
+            &:nth-child(4)
+                right: 0
+                top: 163px
+        &-sunrise img
+            &:nth-child(4)
+                top: 77px
+                right: 119px
+    .review__carousel 
+        .owl-item img
+            display: inline
+            width: auto
+        &.owl-theme
+            .owl-nav
+                display: none !important
+            .owl-dots
+                margin-top: 15px !important
+                position: absolute
+                bottom: 80px
+                right: 60px                
+            .owl-dot 
+                span
+                    border: 2px solid $white
+                &.active span
+                    background: $white
+    &__carousel
+        &-mobile
+            display: none !important
+.visitors
+    margin-top: 266px
+    padding-bottom: 148px
+    border-bottom: 3px solid $blue
+    &__container
+        width: 1080px
+        margin: 0 auto
+    &__title
+        font-family: 'Magnolia'
+        font-weight: 400
+        font-size: 60px
+        color: $orange
+        text-align: center
+        span
+            font-family: 'Magnolia'
+            font-size: 60px
+            font-weight: 500
+            color: $black
+    &__slide
+        text-align: center
+        margin-top: 70px
+        width: 250px
+        height: 350px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &-img
+            width: 40px
+            height: 22px
+            margin: 39px auto
+        &-text
+            font-style: italic
+            font-size: 12px
+            font-weight: 400
+            width: 220px
+            margin: -20px auto
+        &-name
+            font-weight: 700
+            font-size: 15px
+            margin-bottom: 20px
+        &-full
+            font-style: italic
+            font-weight: 400
+            font-size: 12px
+            padding-bottom: 2px
+            border-bottom: 1px solid #000
+            display: inline-block
+            margin-bottom: 30px
+            cursor: pointer
+    &__carousel 
+        &.owl-theme
+            .owl-nav, .owl-dots
+                margin-top: 45px !important               
+            .owl-dot 
+                span
+                    border: 2px solid $orange
+                &.active span
+                    background: $orange
+.hotel-block
+    position: relative
+    &-spot1
+        width: 377px
+        height: 450px
+        background: url(../images/backgrounds/spot9.png)
+        background-repeat: no-repeat
+        position: absolute
+        top: 500px
+        right: 0
+        z-index: -1
+    &-spot2
+        width: 630px
+        height: 230px
+        background: url(../images/backgrounds/spot1.svg)
+        background-repeat: no-repeat
+        position: absolute
+        top: 1520px
+        left: -240px
+        z-index: -1
+    &-spot3
+        width: 540px
+        height: 230px
+        background: url(../images/backgrounds/spot7.svg)
+        background-repeat: no-repeat
+        position: absolute
+        right: 0
+        bottom: 10px
+        z-index: -1
+    &-spot4
+        width: 1420px
+        height: 580px
+        z-index: -1
+        background: url(../images/backgrounds/spot6.svg)
+        background-repeat: no-repeat
+        position: absolute
+        top: 40px
+        left: calc(50% - 710px)
+
+.dhigurah
+    background: url(../images/backgrounds/dhigurah.png)
+    background-size: cover
+.tinadu
+    background: url(../images/backgrounds/tinadu.png)
+    background-size: cover
+.ukulhas
+    background: url(../images/backgrounds/ukulhas.png)
+    background-size: cover
+
+.island
+    padding-top: 264px
+    padding-bottom: 560px
+    &-block
+        position: relative
+    &-spot1
+        width: 470px
+        height: 350px
+        background: url(../images/backgrounds/spot9.svg)
+        background-repeat: no-repeat
+        position: absolute
+        right: 0
+        top: 250px
+    &-spot2
+        width: 510px
+        height: 355px
+        background: url(../images/backgrounds/spot10.svg)
+        background-repeat: no-repeat
+        position: absolute
+        left: -28px
+        bottom: 46px
+    &-arrow1
+        width: 480px
+        height: 460px
+        background: url(../images/backgrounds/arrow1.svg)
+        background-repeat: no-repeat
+        transform: scale(-1, 1)
+        position: absolute
+        left: -176px
+        bottom: -280px
+    &__container
+        max-width: 1260px
+        margin: 0 auto
+    &__title
+        font-size: 70px
+        color: $white
+        span
+            display: block
+            line-height: 0.7
+            &:first-child
+                margin-left: 71px
+            &:last-child
+                font-size: 120px
+    &__subtitle
+        font-family: 'Magnolia'
+        font-size: 60px
+        text-align: center
+        position: relative
+        span
+            font-family: inherit
+            font-size: inherit
+    &__info
+        max-width: 1244px
+        margin: 121px auto 0
+        padding: 50px 28px 20px
+        font-size: 25px
+        text-align: center
+        position: relative
+        p
+            margin-bottom: 30px
+    &__video
+        max-width: 1240px
+        margin: 320px auto 0
+        padding: 102px 67px 43px
+        position: relative
+        video
+            display: none
+            &.active
+                display: block
+        &-title
+            position: absolute
+            top: -66px
+            left: calc(50% - 260px)
+            font-size: 60px
+            font-family: 'Magnolia'
+            width: 520px
+            height: 125px
+            border-radius: 20px
+            display: flex
+            align-items: center
+            justify-content: center
+            background: $blue
+            color: $white
+        &-img
+            position: relative
+            &.none
+                display: none
+        &-play
+            position: absolute
+            top: calc(50% - 65px)
+            left: calc(50% - 65px)
+            width: 130px
+            height: 130px
+            border: 4px solid $white
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 50%
+            cursor: pointer
+            img
+                width: 32px
+                height: 32px
+                position: relative
+                left: 3px
+    &__photos
+        max-width: 1240px
+        margin: 190px auto 0
+        position: relative
+        &-slide
+            position: relative
+            width: 100%
+            height: 800px
+            img
+                position: absolute
+                width: auto !important
+                &:nth-child(1)
+                    left: 99px
+                    top: 259px
+                &:nth-child(2)
+                    left: 339px
+                    top: 11px
+                &:nth-child(3)
+                    left: 579px
+                    top: 89px
+                &:nth-child(4)
+                    right: 101px
+                    top: 11px
+                &:nth-child(5)
+                    left: 339px
+                    top: 337px
+                &:nth-child(6)
+                    right: 222px
+                    top: 337px
+                &:nth-child(7)
+                    left: 219px
+                    bottom: 3px
+                &:nth-child(8)
+                    right: 341px
+                    bottom: 4px
+        &-carousel
+            &.owl-theme
+                .owl-nav
+                    display: none !important
+                .owl-dots
+                    margin-top: 45px !important
+                    position: absolute
+                    right: 101px
+                    bottom: 38px
+                .owl-dot 
+                    span
+                        border: 2px solid $black
+                    &.active span
+                        background: $black
+        &-mobile
+            display: none !important
+        &-all
+            position: absolute
+            right: 125px
+            bottom: 4px
+            a
+                display: flex
+                align-items: center
+            svg
+                transform: scale(-1, 1)
+                margin-right: 12px
+    &__houses
+        max-width: 1240px
+        margin: 304px auto 160px
+        &-carousel
+            max-width: 720px
+            margin: 26px auto 0
+            display: flex
+            justify-content: space-around
+            align-items: stretch
+        &-slide
+            cursor: default
+            &:hover
+                box-shadow: 0px 2.9px 7.25px rgba(0, 0, 0, .25)
+                transform: scale(1)
+
+
+
+
+.error404
+    background: url(../images/backgrounds/404.png)
+    width: 100vw
+    height: 100vh
+    background-size: cover
+    background-repeat: no-repeat
+    &__container
+        width: 1020px
+        margin: 0px auto
+        padding-top: 8%
+    &__title
+        font-family: 'Comfortaa', cursive
+        font-weight: 700
+        font-size: 92px
+        line-height: 1.12
+        color: $white
+        text-align: center
+    &__text
+        font-weight: 400
+        font-size: 30px
+        color: $white
+        text-align: center
+        margin-top: 44px
+    &__btn
+        width: 426px
+        height: 92px
+        border-radius: 104px
+        background-color: $blue
+        margin: 75px auto
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: 700
+        font-size: 40px
+        color: $white
+        cursor: pointer
+
+
+.wrapper
+    background: rgba(0, 0, 0, 0.6)
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 10
+    display: none
+    &-active
+        display: block
+.modal
+    display: none
+    &-active
+        display: block
+    &__video
+        display: none
+        width: 800px
+        height: 620px
+        position: absolute
+        top: 150px
+        left: calc(50% - 400px)
+        &-active
+            display: block
+        &-close
+            position: absolute
+            right: -30px
+            top: -30px
+            cursor: pointer
+    &__form
+        width: 520px
+        height: 620px
+        background: url('../images/backgrounds/form.png')
+        position: absolute
+        top: 70px
+        left: calc(50% - 260px)
+        text-align: center
+        display: none
+        &-comment
+            background: url('../images/icons/comment.svg')
+            background-repeat: no-repeat
+            background-size: contain
+            font-size: 13px
+            display: inline-block
+            width: 228px
+            height: 38px
+            justify-content: center
+            align-items: center
+            padding-left: 15px
+            padding-bottom: 4px
+            position: absolute
+            display: none
+            right: -150px
+            &-name
+                top: 90px
+                &-active
+                    display: flex
+            &-phone
+                top: 185px
+                &-active
+                    display: flex
+            &-email
+                top: 285px
+                &-active
+                    display: flex
+            &-select
+                top: 385px
+                &-active
+                    display: flex
+        &-active
+            display: block
+        &-title
+            width: 400px
+            height: 100px
+            font-family: 'Magnolia'
+            color: $white
+            font-size: 60px
+            background: $blue
+            border-radius: 84px
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            left: 63px
+            top: -50px
+        &-input
+            width: 414px
+            height: 60px
+            background: none
+            border: 2px solid $white
+            border-radius: 84px
+            margin: 0 auto 40px
+            text-align: center
+            color: $white
+            &::placeholder
+                color: $white
+            &:focus
+                outline: none
+            &-name
+                margin-top: 111px
+        &-select
+            width: 414px
+            height: 60px
+            border: 2px solid $white
+            border-radius: 84px
+            margin: 0 auto 40px
+            color: $white
+            cursor: pointer
+            position: relative
+            &-arrow
+                position: absolute
+                right: 32px
+            &-active
+                z-index: 1
+                .modal__form-options
+                    max-height: 200px
+                    padding: 16px 0
+            &-choose
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 61px
+                position: relative
+                padding: 0 22px
+                &::after
+                    content: ''
+                    position: absolute
+                    background: url('../images/icons/arrow.svg')
+                    background-repeat: no-repeat
+                    width: 25px
+                    height: 12px
+                    right: 30px
+                &-active
+                    justify-content: flex-start
+        &-options
+            max-height: 0
+            overflow: hidden
+            transition: max-height .3s
+            background: $white
+            width: 458px
+            position: absolute
+            left: calc(50% - 229px)
+            margin-top: 7px
+        &-option
+            text-align: left
+            font-size: 22px
+            color: $black
+            padding: 13px 19px
+            position: relative
+            &:hover
+                background: $blue
+                color: $white
+        &-btn
+            width: 294px
+            height: 61px
+            background: $white
+            display: flex
+            align-items: center
+            justify-content: center
+            color: $blue
+            margin: 40px auto 0
+            border-radius: 84px
+            font-size: 22px
+            font-weight: 700
+            cursor: pointer
+        &-close
+            position: absolute
+            right: 15px
+            top: 15px
+            cursor: pointer
+    &__send
+        display: none
+        position: relative
+        width: 520px
+        height: 420px
+        background: $white
+        top: 70px
+        left: calc(50% - 260px)
+        text-align: center
+        border-radius: 20px
+        padding-top: 84px
+        &-active
+            display: block
+        &-text
+            color: $blue
+            max-width: 380px
+            margin: 0 auto
+            margin-bottom: 32px
+        img
+            margin-bottom: 26px
+        &-btn
+            background: $blue
+            color: $white
+            width: 294px
+            margin: 38px auto 0
+            font-weight: 700
+            height: 61px
+            border-radius: 84px
+
+
+
+@media screen and (max-width: 1700px)
+    .wait-background-spot2
+        background-size: contain
+        width: 295px
+    .reviews-background-spot
+        top: -215px
+    .island
+        &-spot2
+            transform: scale(0.8)
+            bottom: -70px
+            left: -100px
+
+@media screen and (max-width: 1540px)
+    .main__info
+        max-width: 1000px
+        &-container
+            width: 1300px
+        &-background-arrow
+            background-size: contain
+            width: 395px
+            top: 320px
+            right: 20px
+
+@media screen and (max-width: 1400px)
+    .container
+        width: 1140px
+    .wait
+        padding-top: 150px
+        &-background-spot1
+            left: -190px
+            background-size: contain
+            width: 530px
+        &-background-spot2
+            width: 210px
+    .carousel
+        &.owl-theme
+            .owl-dots, .owl-nav
+                margin-top: 35px !important
+            .owl-dot 
+                span
+                    width: 18px
+                    height: 18px
+    .team__item:nth-child(3)
+        margin-left: 20px
+    .team__item:nth-child(2)
+        margin-left: 10px
+    .reviews-background-spot
+        left: -140px
+    .answers-background-spot
+        background-size: contain
+        width: 300px
+    .answers-background-shark
+        left: -30px
+    .answers
+        padding-top: 200px
+    .main
+        &__info-background-arrow
+            background-size: contain
+            width: 320px
+            top: 330px
+            right: 0
+    .tours-background-palms
+        background-size: contain
+        width: 160px
+        right: 120px
+        bottom: -45px
+    .tours-background-arrow
+        background-size: contain
+        width: 870px
+        right: -35px
+        bottom: -143px
+    .about
+        margin-top: 250px
+        &__content
+            padding: 40px 100px
+            max-width: 660px
+        &__text
+            margin-top: 15px
+    .adv
+        margin-top: 100px
+        &__content
+            &-item
+            &-text
+                max-width: 480px
+    .kitchen
+        margin-top: -30px
+        &__content
+            padding: 40px 100px
+            max-width: 660px
+        &__text
+            margin-top: 15px
+    .hotel-block
+        &-spot1
+            display: none
+        &-spot2
+            display: none
+        &-spot3
+            display: none
+        &-spot4
+            transform: scale(0.83)
+    .visitors
+        margin-top: 200px
+    .review .review__carousel.owl-theme .owl-dots
+        bottom: 80px
+        right: 170px
+    .review__all
+        right: 135px
+        bottom: 55px
+    .island
+        &__photos
+            &-slide
+                img
+                    &:nth-child(4)
+                        right: 11px
+                        top: 11px
+                    &:nth-child(6)
+                        right: 122px
+                    &:nth-child(7)
+                        left: 160px
+                    &:nth-child(8)
+                        right: 300px
+                        bottom: 4px
+        &-spot1
+            transform: scale(0.8)
+            right: -47px
+            top: 280px
+        &-spot2
+            transform: scale(0.6)
+            left: -160px
+            bottom: -100px
+        &-arrow1
+            transform: scale(-0.8, 0.8) rotate(-10deg)
+            
+
+
+@media screen and (max-width: 1200px)
+    .container
+        width: 960px
+    .header
+        &__menu
+            margin-left: 10px
+            li
+                margin-left: 15px
+                text-align: center
+        &__socials
+            a
+                background: none
+                width: 30px
+                margin-top: 10px
+                &::after
+                    content: none
+                img
+                    width: 100%
+    .main__info-background-arrow
+        width: 200px
+        top: 480px
+        right: 0
+    .carousel
+        &.owl-theme
+            .owl-dots, .owl-nav
+                margin-top: 15px !important
+    .tours
+        &-background-palms
+            width: 140px
+            bottom: -65px
+            right: 60px
+        &-background-spot
+            background-size: contain
+            width: 500px
+        &__slide
+            &:hover
+                box-shadow: 0px 2.9px 7.25px rgba(0, 0, 0, 0.25)
+                transform: scale(1)
+        &__carousel
+            &.owl-theme
+                .owl-dots, .owl-nav
+                    margin-top: 5px !important
+        &-background-arrow
+            width: 730px
+            right: -20px
+            bottom: -233px
+    .team
+        margin-top: 100px
+        &__item
+            width: 200px
+            height: 300px
+        &__items
+            margin-top: 80px
+        &__info
+            width: 140px
+            &-text
+                font-size: 11px
+        &__text
+            margin: 55px auto 30px
+    .reviews-background-spot
+        background-size: contain
+        width: 400px
+        z-index: -1
+    .reviews
+        &__carousel.owl-theme
+            .owl-dots, .owl-nav
+                margin-top: 30px !important
+    .answers-background-shark
+        background-size: contain
+        width: 90px
+        top: 70px
+        left: 0
+    .answers-background-lines
+        background-size: contain
+        width: 400px
+        top: 0
+        right: calc(50% - 200px)
+    .answers
+        padding-top: 100px
+        &-background-spot
+            width: 190px
+            top: -125px
+    .ocean
+        &__title
+            font-size: 55px
+    .error404
+        &__title
+            font-size: 80px
+        &__text
+            margin-top: 33px
+            font-size: 28px
+        &__btn
+            margin: 60px auto
+    .hotel
+        &__title
+            font-size: 65px
+            span
+                font-size: 65px
+    .islands
+        height: 900px
+        &__container, &__third, &__fourth, &__eighth
+            &>img
+                transform: scale(0.7)
+        &__palms
+            top: 85px
+            left: 190px
+        &__spot
+            right: -315px
+            top: -18px
+            &-blue
+                transform: scale(-0.7, 0.7)
+                left: -60px
+                top: -220px
+        &__dolphins
+            top: 499px
+            left: 398px
+        &__one
+            top: 78px
+            left: -130px
+        &__second
+            top: 413px
+            left: -418px
+        &__third
+            top: 358px
+            left: -10px
+            &-location
+                top: 6px
+                right: 108px
+            &-title
+                top: -30px
+                right: -21px
+            .islands__location-active .islands__info
+                top: -340px
+        &__fourth
+            top: 278px
+            left: 185px
+            &-location
+                top: -13px
+                right: 72px
+            &-title
+                top: -30px
+                right: -18px
+            .islands__location-active .islands__info
+                top: -240px
+        &__fifth
+            top: 192px
+            left: 522px
+        &__sixth
+            top: 224px
+            right: -674px
+        &__seventh
+            top: 555px
+            left: 308px
+        &__eighth
+            top: 564px
+            right: 277px
+            &-location
+                top: -30px
+                right: 93px
+            &-title
+                top: -30px
+                right: -25px
+            .islands__location-active .islands__info
+                top: -470px
+        svg
+            transform: scale(0.7)
+        &__title
+            font-size: 32px
+    .about
+        margin-top: 150px
+        &__content
+            padding: 30px 60px
+            max-width: 560px
+        &__text
+            margin-top: 15px
+    .adv
+        margin-top: 80px
+        &__content
+            &-item
+                margin-left: 30px
+            &-text
+                font-size: 17px
+                max-width: 302px 
+    .kitchen
+        margin-top: -30px
+        &__content
+            padding: 30px 60px
+            max-width: 560px
+        &__text
+            margin-top: 15px
+    .hotel-block
+        &-spot4
+            transform: scale(0.70)
+    .visitors
+        margin-top: 150px
+        &__slide
+            margin: 70px auto 0
+    .review .review__carousel.owl-theme .owl-dots
+        bottom: 90px
+        right: 150px
+    .review__all
+        right: 115px
+        bottom: 65px
+    .visitors__carousel.owl-theme .owl-dots, .visitors__carousel.owl-theme .owl-nav
+        margin-top: 30px !important
+    .island
+        &__video
+            margin-top: 290px
+            &-title
+                font-size: 50px
+                width: 480px
+                height: 110px
+                left: calc(50% - 240px)
+                top: -55px
+        &__photos
+            margin-top: 110px
+            &-slide img
+                transform: scale(0.8)
+                &:nth-child(2)
+                    left: 160px
+                &:nth-child(3)
+                    left: 350px
+                &:nth-child(4)
+                    right: 100px
+                &:nth-child(5)
+                    left: 280px
+                    top: 300px
+                &:nth-child(6)
+                    right: 60px
+                    top: 300px
+                &:nth-child(7)
+                    left: 110px
+                    bottom: 50px    
+                &:nth-child(8)
+                    right: 240px
+                    bottom: 50px
+            &-carousel.owl-theme
+                .owl-dots
+                    right: 60px
+                    bottom: 120px
+            &-all
+                right: 70px
+                bottom: 90px
+        &-spot1
+            transform: scale(0.6)
+            right: -94px
+            top: 300px
+        &-spot2
+            transform: scale(0.4)
+            bottom: -180px
+
+@media screen and (max-width: 992px)
+    .container
+        width: 720px
+    .mobile-992
+        display: flex !important
+    h1
+        font-size: 60px
+    .title
+        font-size: 50px   
+    .header
+        &__logo
+            width: 140px
+        &__menu
+            li
+                margin-left: 25px
+            a
+                font-size: 18px
+        &__arrow
+            &-menu
+                left: -200px
+        &__socials
+            display: none
+    .modal__video
+        width: 600px
+        left: calc(50% - 300px)
+        top: 150px
+    .main
+        &__info
+            margin-top: 120px
+            &-background-arrow 
+                width: 140px
+                top: 570px
+    .wait
+        padding-top: 110px
+        &__carousel
+            margin: 20px 0
+            &-preactive, &-active
+                transform: scale(1)
+                span
+                    font-size: 12.5px 
+                &::after
+                    content: ''
+            &-min-active
+                transform: scale(1.8)
+                &::after
+                    content: none
+        &-background
+            &-spot1
+                top: 0
+                left: -260px
+            &-spot2
+                width: 160px
+            &-lines
+                background-size: contain
+                width: 300px
+                bottom: -110px
+    .tours
+        margin-top: 130px
+        &-background-palms
+            width: 120px
+            bottom: -75px
+            right: 0
+        &-background-arrow
+            width: 650px
+            right: -20px
+            bottom: -290px
+        &-background-spot
+            background-size: contain
+            width: 470px
+            left: -275px
+            bottom: -40px
+    .team
+        &__items
+            flex-wrap: wrap
+            justify-content: space-between
+            margin-top: 60px
+            align-items: stretch
+        &__item
+            width: calc(50% - 10px)
+            height: auto
+            margin-bottom: 25px
+        &__item
+            transform: rotate(0deg) !important
+            margin-left: 0 !important
+            &:hover
+                box-shadow: none
+        &__text
+            display: none
+            &-info
+                display: block
+    .team__item:nth-child(4)
+        margin-top: 0
+    .reviews-background-spot
+        width: 360px
+        top: -145px
+        left: -190px
+    .reviews-background-dolphin1
+        background-size: contain
+        width: 200px
+        top: -100px
+    .reviews-background-dolphin2
+        background-size: contain
+        width: 140px
+        top: -85px
+    .reviews
+        margin-top: 150px
+        &__carousel
+            .owl-item
+                padding-top: 70px
+                &:hover 
+                    padding-top: 70px
+                    .reviews__slide
+                        transform: scale(1)
+                        top: 0
+                        background: $white 
+                        &-name, &-info, &-watch
+                            color: $black 
+    .answers
+        margin-bottom: 170px
+        &-background-spot
+            width: 190px
+            top: -125px
+    .ocean
+        padding: 60px 0 100px
+        &__title
+            font-size: 40px
+        &__btn
+            font-size: 30px
+    .footer
+        &__container
+            flex-wrap: wrap
+        &__connect
+            margin-top: 20px
+            text-align: left
+            &-text, &-phone, &-email
+                text-align: left
+            img
+                margin-left: 0
+                margin-right: 20px
+    .modal__form
+        background-size: cover
+        background-repeat: no-repeat
+        width: 500px
+        height: 480px
+        border-radius: 20px
+        &-title
+            height: 70px
+            font-size: 40px
+            top: -35px
+            width: 340px
+            left: calc(50% - 170px)
+        &-input, &-select, &-select-choose, &-btn
+            height: 50px
+            margin-bottom: 30px
+            font-size: 18px
+            &-name
+                margin-top: 70px
+        &-btn
+            margin-top: 30px
+        &-option
+            height: 50px
+            font-size: 18px
+        &-options
+            bottom: 60px
+        &-comment
+            &-name
+                top: 60px
+                right: -30px
+            &-phone
+                top: 135px
+                right: -30px
+            &-email
+                top: 215px
+                right: -30px
+            &-select
+                top: 295px
+                right: -30px
+    .error404
+        &__container
+            padding-top: 15%
+        &__title
+            font-size: 70px
+        &__text
+            font-size: 25px
+        &__btn
+            margin: 60px auto
+            font-size: 35px
+            width: 370px
+            height: 75px
+    .hotel
+        height: 500px
+        &__title
+            font-size: 45px
+            span
+                font-size: 45px
+        &__img
+            margin-top: 10px
+        &__container
+            padding-top: 180px
+    .islands
+        height: 700px
+        &__first
+            height: 650px
+        &__container, &__third, &__fourth, &__eighth
+            &>img
+                transform: scale(0.5)
+        &__palms
+            top: 23px
+            left: 53px
+        &__spot
+            right: 40px
+            top: -80px
+            &-blue
+                transform: scale(-0.5, 0.5)
+                left: -101px
+        &__dolphins
+            top: 340px
+            left: 200px
+        &__one
+            top: 38px
+            left: -183px
+        &__second
+            top: 16px
+            left: -430px
+        &__third
+            top: 220px
+            left: -98px
+            &-location
+                top: 22px
+                right: 114px
+            &-title
+                top: -8px
+                right: -9px
+            .islands__location-active .islands__info
+                top: -220px
+                right: -380px
+        &__fourth
+            top: 150px
+            left: 30px
+            &-location
+                top: 22px
+                right: 102px
+            &-title
+                top: -8px
+                right: -8px
+            .islands__location-active .islands__info
+                top: -150px
+                right: -330px
+        &__fifth
+            top: 112px
+            left: 305px
+        &__sixth
+            top: 76px
+            right: -294px
+        &__seventh
+            top: 366px
+            left: 136px
+        &__eighth
+            top: 379px
+            right: 544px
+            &-location
+                top: -14px
+                right: 93px
+            &-title
+                top: -8px
+                right: -14px
+            .islands__location-active .islands__info
+                top: -330px
+                right: 120px
+        svg
+            transform: scale(0.5)
+        &__title
+            font-size: 26px
+        &__info
+            height: 490px
+            width: 315px
+            padding: 30px 15px 20px
+            &-photo
+                width: 200px
+                height: 185px
+            &-title
+                margin-top: 25px
+            &-text
+                font-size: 15px
+                margin-top: 20px
+            &-btn
+                height: 50px
+                margin-top: 30px
+    .about
+        &__item
+            flex-wrap: wrap
+            justify-content: center
+        &__img
+            margin-top: 40px
+            margin-left: 0
+    .adv
+        margin-top: 60px
+        &__content
+            flex-wrap: wrap
+            justify-content: center
+            &-text
+                max-width: 420px
+        &__items
+            margin-top: 30px
+    .kitchen
+        margin-top: -60px
+        &__item
+            flex-wrap: wrap
+            justify-content: center
+        &__img
+            margin-top: 40px
+            margin-left: 0
+    .review
+        margin-top: 60px
+        &__carousel
+            display: none !important
+            &-mobile
+                display: block !important
+        &__slide
+            &-mobile
+                margin: 0px auto
+                max-height: 230px
+                max-width: 600px
+                margin-bottom: 0
+    .hotel-block
+        &-spot4
+            display: none
+    .visitors
+        margin-top: 80px
+        &__title 
+            font-size: 56px
+            span
+                font-size: 56px
+    .review__carousel-mobile
+        &.owl-theme
+            .owl-dots, .owl-nav
+                margin-top: 30px !important
+            .owl-dot 
+                span
+                    border: 2px solid $orange
+                    width: 18px
+                    height: 18px
+                &.active span
+                    background: $orange
+    .review__container
+        text-align: center
+    .review__all
+        position: static
+        color: $orange
+        display: inline-block
+        margin-top: 20px
+        path
+            fill: $orange
+    .island
+        padding: 260px 0
+        &__title
+            font-size: 60px
+            span
+                font-size: 60px
+                line-height: 1
+                &:first-child
+                    margin-left: 0
+                &:last-child
+                    font-size: 80px
+        &__info
+            font-size: 22px
+        &__video
+            margin-top: 260px
+            padding: 60px 30px 30px
+            &-title
+                font-size: 40px
+                width: 400px
+                height: 90px
+                left: calc(50% - 200px)
+                top: -45px
+            &-play
+                width: 100px
+                height: 100px
+                top: calc(50% - 50px)
+                left: calc(50% - 50px)
+                img
+                    width: 28px
+                    height: 28px
+        &__photos
+            text-align: center
+            &-carousel
+                display: none !important
+            &-mobile
+                display: block !important
+                &.owl-theme
+                    .owl-nav
+                        display: none !important
+                    .owl-dots
+                        margin-top: 45px !important
+                        position: static
+                    .owl-dot 
+                        span
+                            border: 2px solid $black
+                            width: 18px
+                            height: 18px
+                        &.active span
+                            background: $black
+            &-slide
+                max-height: 230px
+                display: flex
+                align-items: center
+                justify-content: center
+                img
+                    position: static
+            &-all
+                position: static
+                display: inline-block
+        &__subtitle
+            font-size: 50px
+        &__houses
+            margin-top: 220px
+        &-arrow1
+            transform: scale(-0.6, 0.6) rotate(-11deg)
+            left: -230px
+        &-spot2
+            display: none
+                    
+@media screen and (max-width: 768px)
+    .container
+        width: 540px
+    h1
+        font-size: 50px
+        padding: 0 20px
+    .title
+        font-size: 40px
+    .first
+        &__title
+            padding-top: 285px
+    .header
+        &-active
+            position: fixed
+        &__mobile
+            display: block
+            position: absolute
+            right: 20px
+            top: 110px
+            max-height: 0
+            overflow: hidden
+            transition: all .3s
+            &-active
+                max-height: 400px
+            ul
+                list-style: none
+            li
+                background: $white
+                border-radius: 10px
+                height: 40px
+                padding: 0 10px
+                font-size: 18px
+                display: flex
+                align-items: center
+                justify-content: center
+                margin-bottom: 5px
+            img
+                width: 30px
+        &__menu
+            display: none
+        &__logo
+            width: 180px
+        &__left
+            margin-top: 30px
+        &__container
+            align-items: center
+        &__burger
+            display: block
+            margin-top: 30px
+            div
+                width: 30px
+                background: $white
+                height: 2px
+                margin-bottom: 5px
+                position: relative
+                top: 0
+                transition: all .3s
+            &-active
+                div
+                    &:nth-child(1)
+                        transform: rotate(45deg)
+                        top: 3px
+                    &:nth-child(2)
+                        display: none
+                    &:nth-child(3)
+                        transform: rotate(-45deg)
+                        top: -3px
+    .modal__video
+        width: 80%
+        left: 10%
+        top: 100px
+    .main
+        &__info
+            margin-top: 80px
+            font-size: 20px
+            span
+                font-size: 24px 
+            p
+                margin-bottom: 20px
+            .blue
+                margin-bottom: 20px
+            &-background-arrow 
+                width: 120px
+                top: 440px
+    .wait
+        padding-top: 70px
+        &__carousel
+            &-preactive, &-active, &-slide
+                width: 100%
+                transform: scale(1)
+                &::after
+                    content: none
+            &-min-active
+                transform: scale(1)
+                &::after
+                    content: none
+            span
+                font-size: 25px
+        &-background
+            &-spot1
+                left: -110px
+                width: 300px
+            &-spot2
+                display: none
+    .tours
+        margin-top: 130px
+        &__slide
+            margin-top: 0
+        &-background-palms
+            width: 100px
+            bottom: -25px
+        &-background-arrow 
+            width: 350px
+            right: 40px
+            bottom: -560px
+    .team
+        &__items
+            padding: 0 30px
+    .reviews-background-dolphin1
+        background-size: contain
+        width: 150px
+        top: -60px
+        right: 60px
+    .reviews-background-dolphin2
+        width: 100px
+        top: -55px
+        right: -25px
+    .reviews-background-spot
+        width: 320px
+        top: -95px
+        left: -200px
+    .reviews
+        margin-top: 100px
+        &__carousel
+            margin-top: 0
+    .answers
+        padding-top: 70px
+        &__items
+            flex-wrap: wrap
+        &__item
+            width: 100%
+            border-left: none !important
+            padding: 0 !important
+            &:nth-child(2) .answers__accordeon:nth-child(1)
+                padding-top: 40px
+        &-background-spot
+            width: 160px
+    .ocean
+        &__title
+            font-size: 34px
+        &__btn
+            font-size: 26px
+            width: 370px
+    .answers-background-lines
+        width: 320px
+        top: -10px
+        right: calc(50% - 160px)
+    .error404
+        &__container
+            padding-top: 15%
+        &__title
+            font-size: 50px
+        &__text
+            br
+                display: none
+        &__btn
+            margin: 60px auto
+            font-size: 30px
+            width: 360px
+            height: 65px
+    .hotel
+        height: 400px
+        &__title
+            font-size: 35px
+            span
+                font-size: 35px
+    .islands
+        height: 530px
+        &__first
+            height: 550px
+            .islands
+        &__container, &__third, &__fourth, &__eighth
+            &>img
+                transform: scale(0.4)
+        &__palms
+            top: -8px
+            left: -14px
+        &__spot
+            right: 217px
+            top: -107px
+            &-blue
+                transform: scale(-0.4, 0.4)
+                left: -121px
+                top: -200px
+        &__dolphins
+            top: 260px
+            left: 105px
+        &__one
+            top: 19px
+            left: -209px
+        &__second
+            top: -33px
+            left: -435px
+        &__third
+            top: 150px
+            left: -140px
+            &-location
+                top: 32px
+                right: 120px
+            &-title
+                top: 6px
+                right: 6px
+            .islands__location-active .islands__info
+                top: -160px
+                right: -340px
+        &__fourth
+            top: 86px
+            left: -48px
+            &-location
+                top: 39px
+                right: 116px
+            &-title
+                top: 6px
+                right: 8px
+            .islands__location-active .islands__info
+                top: -110px
+                right: -290px
+        &__fifth
+            top: 72px
+            left: 197px
+        &__sixth
+            top: 2px
+            right: -104px
+        &__seventh
+            top: 272px
+            left: 52px
+        &__eighth
+            top: 284px
+            right: 675px
+            &-location
+                top: -4px
+                right: 94px
+            &-title
+                top: 6px
+                right: 4px
+            .islands__location-active .islands__info
+                top: -250px
+                right: 90px
+        svg
+            transform: scale(0.4)
+        &__title
+            font-size: 18px
+        &__info
+            height: 355px
+            width: 300px
+            padding: 20px 15px
+            &-photo
+                width: 130px
+                height: 125px
+                border-radius: 30px
+            &-title
+                margin-top: 15px
+                font-size: 16px
+            &-text
+                font-size: 12px
+                margin-top: 10px
+            &-btn
+                height: 40px
+                margin-top: 20px
+                font-size: 14px
+                width: 100%
+    .visitors
+        &__title 
+            font-size: 50px
+            span
+                font-size: 50px
+    .review__slide-mobile
+        max-height: 176px
+    .island
+        &__info
+            margin: 90px auto 0
+            padding: 40px 20px 10px
+            font-size: 20px
+        &__video
+            padding: 60px 20px 20px
+            &-title
+                font-size: 30px
+                width: 280px
+                height: 70px
+                left: calc(50% - 140px)
+                top: -35px
+            &-play
+                width: 80px
+                height: 80px
+                top: calc(50% - 40px)
+                left: calc(50% - 40px)
+        &__subtitle
+            font-size: 40px
+        &__houses
+            margin-top: 170px
+            margin-bottom: 70px
+            &-carousel
+                flex-direction: column
+            &-slide
+                height: auto
+        &-spot1
+            top: 340px
+
+@media screen and (max-width: 576px)
+    .container
+        width: calc(100% - 20px)
+    h1
+        font-size: 40px
+    .team
+        &__item
+            width: 100%
+            max-width: 250px
+        &__items
+            justify-content: center
+    .answers
+        &__items
+            margin: 40px 20px 0
+        &-background-spot
+            display: none
+    .ocean
+        padding-left: 20px
+        padding-right: 20px
+        &__title
+            font-size: 30px
+        &__btn
+            font-size: 20px
+            width: 80%
+    .footer
+        &__container
+            margin-left: 20px
+        &__menu
+            width: 100%
+            margin-top: 20px
+            margin-left: 0
+            ul:nth-child(1) li
+                text-align: left
+    .main
+        &__info
+            &-background-arrow 
+                display: none
+    .wait
+        &-background
+            &-spot1
+                left: -70px
+                width: 200px
+                top: 20px
+            &-lines
+                width: 180px
+                left: 50px
+    .wait__carousel .owl-item
+        height: 340px
+    .tours
+        &-background-palms
+            width: 80px
+            bottom: -45px
+            right: 20px
+        &-background-arrow, &-background-spot 
+            display: none
+    .reviews
+        margin-top: 150px
+        &-background-spot
+            display: none
+        &-background-dolphin1
+            right: 190px
+            top: -70px
+        &-background-dolphin2
+            transform: rotate(-26deg)
+            right: 95px
+            top: -115px
+    .answers-background-lines
+        width: 240px
+        right: calc(50% - 120px)
+    .answers-background-shark
+        display: none
+    .modal__form
+        width: 80%
+        height: auto
+        left: 10%
+        &-title
+            height: 60px
+            font-size: 30px
+            top: -30px
+            width: 80%
+            left: 10%
+        &-input, &-select, &-btn
+            width: 90%
+            font-size: 14px
+            &-name
+                margin-top: 60px
+        &-btn
+            margin-top: 30px
+        &-select-choose
+            width: 100%
+            font-size: 14px
+            padding: 0 10px
+        &-option
+            height: 30px
+            font-size: 12px
+        &-options
+            width: 100%
+            left: 0
+        &-comment
+            font-size: 11px
+            width: 200px
+            height: 32px
+            padding-left: 8px
+            &-name
+                top: 45px
+                right: -35px
+            &-phone
+                top: 120px
+                right: -35px
+            &-email
+                top: 200px
+                right: -35px
+            &-select
+                top: 280px
+                right: -35px
+    .modal__send
+        width: 80%
+        left: 10%
+        &-text
+            width: 90%
+            margin: 0 auto
+            font-size: 16px
+            margin-bottom: 30px
+        &-btn
+            width: 80%
+            height: 50px
+            font-size: 18px
+    .error404
+        &__container
+            padding-top: 15%
+        &__title
+            font-size: 34px
+        &__text
+            font-size: 19px
+            br
+                display: none
+        &__btn
+            margin: 50px auto
+            font-size: 27px
+            max-width: 100%
+            height: 60px
+    .review__slide-mobile
+        max-width: 300px
+    .visitors
+        margin-top: 50px
+        &__title span
+            display: block
+            margin-top: -20px
+    .island
+        padding: 190px 0 160px
+        &__title
+            font-size: 40px
+            span
+                font-size: 40px
+                &:last-child
+                    font-size: 60px
+        &__video
+            margin-top: 110px
+            &-title
+                font-size: 26px
+                width: 250px
+                height: 60px
+                left: calc(50% - 125px)
+                top: -30px
+        &__photos
+            &-mobile
+                &.owl-theme
+                    .owl-dot 
+                        span
+                            margin: 5px
+        &-spot1, &-arrow1
+            display: none
+    
+    
+@media screen and (max-width: 530px)
+    .mobile-530
+        display: block
+    .islands
+        &__first
+            height: 500px
+        &__third
+            .islands__location-active .islands__info
+                right: -240px
+        &__fourth
+            .islands__location-active .islands__info
+                top: -60px
+                right: -190px
+        &__eighth
+            .islands__location-active .islands__info
+                top: -250px
+                right: 90px
+        &__info
+            height: 364px
+            width: 200px
+            padding: 20px 15px
+            &-photo
+                width: 110px
+                height: 105px
+    .adv
+        margin-top: 50px
+        &__content
+            &-text
+                max-width: 360px
+
+@media screen and (max-width: 480px)
+    .wait
+        &-background
+            &-spot1
+                left: -30px
+                width: 160px
+                top: 10px
+    .about
+        &__content
+            padding: 25px 25px
+    .adv
+        &__content
+            &-text
+                max-width: 333px
+    .kitchen
+        &__content
+            padding: 25px 25px
+
+@media screen and (max-width: 440px)
+    h1
+        font-size: 34px
+    .islands
+        height: 480px
+        &__first
+            height: 550px
+            .islands
+        &__container, &__third, &__fourth, &__eighth
+            &>img
+                transform: scale(0.35)
+        &__palms
+            top: -24px
+            left: -47px
+        &__spot
+            right: 297px
+            top: -124px
+        &__dolphins
+            top: 220px
+            left: 55px
+        &__one
+            top: 11px
+            left: -222px
+        &__second
+            display: none
+        &__third
+            top: 117px
+            left: -163px
+            &-location
+                top: 20px
+                right: 100px
+            &-title
+                top: 16px
+                right: 10px
+            .islands__location-active .islands__info
+                right: -210px
+                top: -120px
+        &__fourth
+            top: 52px
+            left: -86px
+            &-location
+                top: 50px
+                right: 126px
+            &-title
+                top: 16px
+                right: 8px
+            .islands__location-active .islands__info
+                right: -60px
+        &__fifth
+            top: 53px
+            left: 143px
+        &__sixth
+            top: -35px
+            right: -9px
+        &__seventh
+            top: 225px
+            left: 8px
+        &__eighth
+            top: 238px
+            right: 742px
+            &-location
+                top: -8px
+                right: 124px
+            &-title
+                top: 16px
+                right: 4px
+            .islands__location-active .islands__info
+                top: -210px
+        svg
+            transform: scale(0.35)
+        &__title
+            font-size: 16px
+        &__info
+            height: 330px
+            &-title
+                margin-top: 10px
+                font-size: 14px
+            &-text
+                font-size: 11px
+            &-btn
+                height: 32px
+                margin-top: 10px
+                font-size: 12px
+    .about
+        margin-top: 120px
+    .adv
+        &__content
+            &-text
+                max-width: 273px
+
+@media screen and (max-width: 380px)
+    .reviews
+        &-background-dolphin1
+            width: 100px
+            right: 160px
+        &-background-dolphin2
+            width: 70px
+            right: 85px
+    .about
+        margin-top: 90px
+    .adv
+        &__content
+            &-text
+                max-width: 252px
+                font-size: 15px
+    .visitors
+        &__title
+            font-size: 40px 
+            span
+                font-size: 40px
+                display: block
+                margin-top: -20px
+@media screen and (max-width: 360px)
+    .tours
+        &-background-palms
+            width: 70px
+            bottom: -15px
+    .wait-background-lines
+        width: 140px
+        left: 20px
+    .adv
+        &__content
+            &-text
+                max-width: 230px
+
+@media screen and (max-width: 340px)
+    .islands
+        &__dolphins
+            top: 220px
+            left: 25px
+        &__eighth
+            top: 258px
+            right: 782px
+            .islands__location-active .islands__info
+                right: 70px
+    .about
+        margin-top: 60px
+    .adv
+        &__content
+            &-text
+                max-width: 223px
+@media screen and (max-width: 330px)
+    h1
+        font-size: 28px
+    .about
+        margin-top: 80px
+    .adv
+        &__content
+            &-text
+                max-width: 205px
+
+
+
+
+
+
+
+
+
+
+
